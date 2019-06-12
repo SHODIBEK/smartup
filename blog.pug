@@ -1,0 +1,176 @@
+extends pug/base
+
+append vars
+    - title = 'Блог'
+    - meta.description = 'Описание страницы'
+    - meta.viewport = 'width=device-width, initial-scale=1'
+    - link.icon = './favicon.ico'
+    - meta.formatDetection = 'telephone=no'
+    - meta.themeColor = '#77d5fa'
+    - defaultLink = 'javascript:void(0);'
+block content
+    .content
+        include pages/header
+        .wrapper
+            .container
+                ul.crumbs
+                    li
+                        a(href="/").home
+                            | Главная
+                    li.active
+                        a(href="#") Блог
+                .navigation
+                    h1
+                        | Блог
+                .content-wrapper
+                    .blog
+                        .blog-filter
+                            ul.blog-filters
+                                li.placeholder
+                                    a(href="javascript:void(0);" data-type="all" data-placeholder="Выбрать") Все <span>(34)</span></span>
+                                li.filter.active(data-filter="all")
+                                    a(href="javascript:void(0);" data-type="all proccess service marketing sales") Все <span>(34)</span>
+                                li.filter(data-filter=".proccess")
+                                    a(href="javascript:void(0);" data-type="proccess") Автоматизация процессов <span>(12)</span>
+                                li(data-filter=".service").filter
+                                    a(href="javascript:void(0);" data-type="service") Клиентский сервис <span>(5)</span>
+                                li(data-filter=".marketing").filter
+                                    a(href="javascript:void(0);" data-type="marketing") Маркетинг <span>(5)</span>
+                                li(data-filter=".sales").filter
+                                    a(href="javascript:void(0);" data-type="sales") Увеличение продаж <span>(15)</span>
+                        .blog-items
+                            ul
+                                li.mix.marketing
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-1.png", alt="img-1")
+                                            span Маркетинг
+                                        .blog-items__block
+                                            h5 Импульсивные покупки составляют значительную долю в потребительских расходах.
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.marketing
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-2.png", alt="img-2")
+                                            span Маркетинг
+                                        .blog-items__block
+                                            h5 Как заставить смотреть рекламу
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.service
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-3.png", alt="img-3")
+                                            span Клиентский сервис
+                                        .blog-items__block
+                                            h5 Импульсивные покупки составляют значительную долю в потребительских расходах.
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.service
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-4.png", alt="img-4")
+                                            span Клиентский сервис
+                                        .blog-items__block
+                                            h5 шесть проверенных методов которые приведут ваших клиентов к вам снова и заставят покупать больше
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.service
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-5.png", alt="img-5")
+                                            span Клиентский сервис
+                                        .blog-items__block
+                                            h5 Импульсивные покупки составляют значительную долю в потребительских расходах.
+                                            p Посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.proccess
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-6.png", alt="img-6")
+                                            span Автоматизация процессов
+                                        .blog-items__block
+                                            h5 значительную долю в потребительских расходах сервиса.
+                                            p Посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.proccess
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-6.png", alt="img-6")
+                                            span Автоматизация процессов
+                                        .blog-items__block
+                                            h5 значительную долю в потребительских расходах сервиса.
+                                            p Посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.sales
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-4.png", alt="img-4")
+                                            span Автоматизация процессов
+                                        .blog-items__block
+                                            h5 значительную долю в потребительских расходах сервиса.
+                                            p Посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.marketing
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-2.png", alt="img-2")
+                                            span Маркетинг
+                                        .blog-items__block
+                                            h5 Как заставить смотреть рекламу
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.marketing
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-7.jpg", alt="img-7")
+                                            span Маркетинг
+                                        .blog-items__block
+                                            h5 Как заставить смотреть рекламу
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.service
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-3.png", alt="img-3")
+                                            span Клиентский сервис
+                                        .blog-items__block
+                                            h5 Импульсивные покупки составляют значительную долю в потребительских расходах.
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.service
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-4.png", alt="img-4")
+                                            span Клиентский сервис
+                                        .blog-items__block
+                                            h5 шесть проверенных методов которые приведут ваших клиентов к вам снова и заставят покупать больше
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                                li.mix.service
+                                    a(href="#")
+                                        .blog-items__img
+                                            img(src="images/content/img-4.png", alt="img-4")
+                                            span Клиентский сервис
+                                        .blog-items__block
+                                            h5 шесть проверенных методов которые приведут ваших клиентов к вам снова и заставят покупать больше
+                                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее,
+                                            .arrow Подробнее
+                                        span.createDate 25.09.2019
+                            .fail-message результаты не найдены
+                        .blog-other.loadmore
+                            a(href="javascript:void(0);").loadmore-button Загрузить еще
+        include pages/footer

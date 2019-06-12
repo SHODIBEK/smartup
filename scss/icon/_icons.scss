@@ -1,0 +1,66 @@
+.fb {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url('../images/icons/fb.svg') no-repeat center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: url('../images/icons/fb2.svg') no-repeat center;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.youtube {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url('../images/icons/youtube.png') no-repeat center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: url('../images/icons/youtube2.png') no-repeat center;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.instagram {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url('../images/icons/instagram.svg') no-repeat center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: url('../images/icons/instagram2.svg') no-repeat center;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.home {
+    display: inline-block;
+    background: url('../images/icons/home.svg') no-repeat left top;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: url('../images/icons/home2.svg') no-repeat left top;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.back-icon {
+    position: relative;
+    margin-right: 40px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 25px;
+        height: 12px;
+        background: url('../images/icons/left-arrow.svg') no-repeat center;
+    }
+}

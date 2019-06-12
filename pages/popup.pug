@@ -1,0 +1,35 @@
+.popup#popup
+    .popup-wrapper
+        span.popup-close#close
+        .popup-title
+            | заголовок попапа
+        form#count
+            .popup-items
+                ul.popup-group
+                    li Торговый представитель Мерчендайзер
+                    li.form-group
+                        input(type="number" name="r1" id="r1")
+                        label(for="r1") Укажите количество
+                    li.input-group
+                        input(type="text" value="90000" id="p1" class="hidden")
+                        label(for="p1") 90000 <font>*</font>
+                ul.popup-group
+                    li Супервайзер/Менеджер Экспедитор, Инкасатор
+                    li.form-group
+                        input(type="number" name="r2" id="r2")
+                        label(for="r2") Укажите количество
+                    li.input-group
+                        input(type="text" value="45000" id="p2" class="hidden")
+                        label(for="p1") 45000 <font>*</font>
+                ul.popup-group
+                    li Торговая точка/Продавец
+                    li.form-group
+                        input(type="number" name="r3" id="r3")
+                        label(for="r3") Укажите количество
+                    li.input-group
+                        input(type="text" value="10000" id="p3" class="hidden")
+                        label(for="p1") 10000 <font>*</font>
+            p * Цена указана за одного пользователя в месяц
+            h5 Общая стоимость в месяц <label><span>0</span><font>сум</font></label>
+            .popup-link
+                a(href="javascript:void(0);")#reset подсчитать заново

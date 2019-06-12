@@ -1,0 +1,176 @@
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    overflow-y: auto;
+    z-index: 9999;
+
+    &-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 40px 30px 70px;
+        border-radius: 12px;
+        background: #fff;
+    }
+
+    &-close {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        width: 33px;
+        height: 33px;
+        cursor: pointer;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 33px;
+            height: 3px;
+            background: #f9a638;
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+    }
+
+    &-title {
+        display: block;
+        margin-bottom: 35px;
+        font-family: $robotoC;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 0.07em;
+        color: $text;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &-items {
+        padding-bottom: 20px;
+        border-bottom: 3px solid #f9a638;
+    }
+
+    &-group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #d9d9d9;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        li {
+            font-size: 18px;
+            color: $text;
+
+            & > label {
+                text-align: center;
+                display: block;
+            }
+        }
+
+        .form-group {
+            width: unset;
+            margin-bottom: 0;
+
+            label {
+                font-size: 18px;
+                left: 14px;
+                top: 14px;
+            }
+
+            input {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            input {
+                height: 45px;
+            }
+
+            &.focused {
+                input {
+                    padding: 20px 15px 5px;
+                }
+                label {
+                    left: 0;
+                }
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+            }
+        }
+
+        .price {
+            font-style: italic;
+            text-align: center;
+        }
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 16px;
+        color: $text;
+    }
+
+    h5 {
+        margin: 50px 0;
+        text-align: right;
+        font-size: 24px;
+        line-height: 30px;
+        color: $text;
+        font-weight: normal;
+
+        label {
+            display: block;
+        }
+
+        span,
+        font {
+            font-weight: 600;
+        }
+
+        font {
+            margin-left: 10px;
+        }
+    }
+
+    &-link {
+        text-align: center;
+
+        a {
+            display: inline-block;
+            font-family: $robotoC;
+            font-weight: 600;
+            font-size: 20px;
+            letter-spacing: 0.07em;
+            color: $sky;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-bottom: 1px dashed $sky;
+
+            &:hover {
+                border-bottom: 1px dashed transparent;
+            }
+        }
+    }
+}

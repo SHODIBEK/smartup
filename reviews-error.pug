@@ -1,0 +1,142 @@
+extends pug/base
+
+append vars
+    - title = 'Отзывы'
+    - meta.description = 'Описание страницы'
+    - meta.viewport = 'width=device-width, initial-scale=1'
+    - link.icon = './favicon.ico'
+    - meta.formatDetection = 'telephone=no'
+    - meta.themeColor = '#77d5fa'
+    - defaultLink = 'javascript:void(0);'
+    - body.classList = ['inner-page'];
+block content
+    .content
+        include pages/header
+        .wrapper
+            .container
+                ul.crumbs
+                    li
+                        a(href="/").home
+                            | Главная
+                    li.active
+                        a(href="#") Отзывы
+                .navigation
+                    h1
+                        | Отзывы
+                .content-wrapper
+                    .reviews
+                        .review-items
+                            .review-item
+                                .review-img
+                                    img(src="images/content/image.png" alt="image")
+                                .review-block
+                                    h5 Иван Рамзин
+                                    p Программный комплекс позволяющий автоматизировать работу офисных и «полевых» сотрудников фармацевтических компаний. Это инновационный продукт, позволяющий автоматизировать работу как отдела кадров так и унифицировать
+                                    .review-link
+                                        p Директор <a href="#" target="_blank">Smart CompRate</a>
+                            .review-item
+                                .review-img
+                                    img(src="images/content/image2.jpg" alt="image")
+                                .review-block
+                                    h5 Камад Зержанов
+                                    p Легко масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе. Масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе.
+                                    .review-link
+                                        p Старший менеджер <a href="#" target="_blank">Emoy Siamot Lou</a>
+                            .review-item
+                                .review-img
+                                    img(src="images/content/image.png" alt="image")
+                                .review-block
+                                    h5 Иван Рамзин
+                                    p Программный комплекс позволяющий автоматизировать работу офисных и «полевых» сотрудников фармацевтических компаний. Это инновационный продукт, позволяющий автоматизировать работу как отдела кадров так и унифицировать
+                                    .review-link
+                                        p Директор <a href="#" target="_blank">Smart CompRate</a>
+                            .review-item
+                                .review-img
+                                    img(src="images/content/image2.jpg" alt="image")
+                                .review-block
+                                    h5 Камад Зержанов
+                                    p Легко масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе. Масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе.
+                                    .review-link
+                                        p Старший менеджер <a href="#" target="_blank">Emoy Siamot Lou</a>
+                            .review-item
+                                .review-img
+                                    img(src="images/content/image.png" alt="image")
+                                .review-block
+                                    h5 Иван Рамзин
+                                    p Программный комплекс позволяющий автоматизировать работу офисных и «полевых» сотрудников фармацевтических компаний. Это инновационный продукт, позволяющий автоматизировать работу как отдела кадров так и унифицировать
+                                    .review-link
+                                        p Директор <a href="#" target="_blank">Smart CompRate</a>
+                            .review-item
+                                .review-img
+                                    img(src="images/content/image2.jpg" alt="image")
+                                .review-block
+                                    h5 Камад Зержанов
+                                    p Легко масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе. Масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе.
+                                    .review-link
+                                        p Старший менеджер <a href="#" target="_blank">Emoy Siamot Lou</a>
+                            .review-item
+                                .review-img
+                                    img(src="images/content/image.png" alt="image")
+                                .review-block
+                                    h5 Иван Рамзин
+                                    p Программный комплекс позволяющий автоматизировать работу офисных и «полевых» сотрудников фармацевтических компаний. Это инновационный продукт, позволяющий автоматизировать работу как отдела кадров так и унифицировать
+                                    .review-link
+                                        p Директор <a href="#" target="_blank">Smart CompRate</a>
+                            .review-item
+                                .review-img
+                                    img(src="images/content/image2.jpg" alt="image")
+                                .review-block
+                                    h5 Камад Зержанов
+                                    p Легко масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе. Масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе.
+                                    .review-link
+                                        p Старший менеджер <a href="#" target="_blank">Emoy Siamot Lou</a>
+                        .review-other
+                            a(href="#") Загрузить ещё
+                        .review-form
+                            .review-title
+                                | Оставить отзыв
+                            form(action="/" method="GET")
+                                .review-form__top
+                                    .form-group.error
+                                        input(type="text" name="name" id="name")
+                                        label(for="name") Представьтесь пожалуйста
+                                    .form-group.error
+                                        input(type="email" name="email" id="email")
+                                        label(for="email") Ваш адрес электронный почты
+                                    .form-group.error
+                                        textarea(id="text")
+                                        label(for="text") Введите сообщение
+                                .review-form__bottom
+                                    <div class="visualCaptcha" id="simple-captcha">
+                                    <div class="visualCaptcha-possibilities">
+                                    <div class="img"><a href="javascript:void(0);"><img src="images/icons/shirt.png" alt="shirt"></a></div>
+                                    <div class="img"><a href="javascript:void(0);"><img src="images/icons/headphone.png" alt="headphone"></a></div>
+                                    <div class="img"><a href="javascript:void(0);"><img src="images/icons/auto.png" alt="auto"></a></div>
+                                    <div class="img"><a href="javascript:void(0);"><img src="images/icons/buggy.png" alt="buggy"></a></div>
+                                    <div class="img"><a href="javascript:void(0);"><img src="images/icons/coffee.png" alt="coffee"></a></div>
+                                    <div class="img"><a href="javascript:void(0);"><img src="images/icons/airplain.png" alt="airplain"></a></div>
+                                    </div>
+                                    <div class="visualCaptcha-explanation error">Выберите&nbsp;<span class="active">«автомобиль»</span>, чтобы подтвердить, что&nbsp;Вы не&nbsp;робот</div>
+                                    </div>
+                                    .review-form__format
+                                        p
+                                            | Форматы и максимальный вес:
+                                        ul
+                                            li
+                                                | JPG
+                                            li
+                                                | PNG
+                                            li
+                                                | GIF
+                                            li
+                                                | 2 MB
+                                    .review-form__download.error
+                                        .error-txt
+                                            | Фотография ещё не загружена
+                                        <span class="check" style="display:none">Фотография загружена</span>
+                                        input(type="file" id="file" name="file" accept="image/gif, image/jpeg, image/png")
+                                        label(for="file" data-text="загрузить другую фотографию").link Загрузить фотографию
+                                        .review-form__submit
+                                            button(type="submit" disabled).submit.btn
+                                                span Отправить
+        include pages/footer

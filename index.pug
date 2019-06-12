@@ -1,0 +1,151 @@
+extends pug/base
+
+append vars
+	- title = 'Главная страница'
+	- meta.description = 'Описание страницы'
+	- meta.viewport = 'width=device-width, initial-scale=1'
+	- link.icon = './favicon.ico'
+	- meta.formatDetection = 'telephone=no'
+	- meta.themeColor = '#77d5fa'
+	- defaultLink = 'javascript:void(0);'
+block content
+	.content
+		include pages/header
+		.wrapper
+			.preloader
+				.preloader-svg
+					<?xml version="1.0" encoding="utf-8"?>
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1600 2000" style="enable-background:new 0 0 1600 2000;" xml:space="preserve">
+						<path style="fill:#F58634;" class="st0 anim1" d="M140.6,584.5c0,0,25,107.7,40,147.7s45,117,56,139s35,65,35,65l51-77l52-71c0,0,25-37,44-57s82-96,142-142 s144-102,144-102l69-36l-134-69c0,0-103-41-139-51s-80-22-80-22l-66,42c0,0-65,47-101,86s-83,100-83,100L140.6,584.5z"/>
+						<path style="fill:#A8CF45;" class="st1 anim2" d="M789.6,432.3c0,0-98-57.1-149.3-75.1s-130-44.7-130-44.7l-61.3-18.7l68.7-30.7c0,0-0.7-4.7,63.3-20.7 s84.7-24,132-26.7c47.3-2.7,78.7-4,100-3.3c21.3,0.7,46.8-0.8,102.5,10.2c55.7,11,75.3,14.8,95.2,22c19.8,7.2,45,15,64.2,23.5 s19.2,8.5,19.2,8.5l41.7,19.5l-25,7.5l-33.5,10l-42.5,14.5l-34,11.5l-36.5,12.5l-25,10l-41,16.5l-40.5,19l-38.5,18.5L789.6,432.3z"/>
+						<path style="fill:#D2E28B;" class="st2 anim3" d="M811.6,452.2l52-29.5l38-20.5l61.5-28.5l35-14l43.5-14l79.5-23.4l42-10.1c0,0,33.2,16.2,69.2,43.8 c36,27.7,62,48.5,83.3,70.5c21.3,22,54.7,58,58.7,62.7s21.8,29.8,29.8,41.3s19.3,28.3,25.8,38.3s13.8,22.5,13.8,22.5l-8.3,28.1 l-10.3,34.1l-5.6,19.1l-9.1,27.4l-9.5,26.8l-8,24.3l-7.6,21l-14.3,36.5l-8.6,20.4l-8.8,19.3l-9.3,19.6l-11,22.6l-10.5,20.1l-9.4,18 l-5.1,9.6l-12.5-19.3l-13.1-20.4l-11.6-18.6l-9.9-14.4l-12.4-18.6l-9.5-13.8l-15.4-21.6l-14.6-19l-7.9-10.1c0,0-52.5-64.5-72.2-87.1 s-66.3-69-78.7-80c-12.3-11-62.3-51-84-67c-21.7-16-42.3-30.7-74-50C860.9,478.8,811.6,452.2,811.6,452.2z"/>
+						<path style="fill:#A53692;" class="st3 anim4" d="M1316.9,966.5c0,0,12.7-23.3,27.3-51.3s11.3-20,28-56.7c16.7-36.7,27.3-61.3,36.7-88.7 c9.3-27.3,25.3-71.3,25.3-71.3l14.7-44l11.3-29.4c0,0-3.3-11.9,8,12.7c11.3,24.7,18,37.3,25.3,59.3c7.3,22,13.3,38.7,13.3,38.7 l5.5,19.3l7.7,29.2c0,0,4.2,14.8,6.5,26.2c2.3,11.3,4.8,24.4,4.8,24.4l2.5,19c0,0,2.8,8.3,4.8,33.9c2,25.7,1.7,4.7,2.7,37.7 s3.3,32.7,1.7,59.3c-1.7,26.7-0.3,14.7-3,41.3c-2.7,26.7-6.3,58.3-6.3,58.3l-6.7,34.3l-7,32.3l-11,37.7l-10.3,31l-9.7,25.7l-15,34 l-16.7,33l-15.3-47l-19-58l-21.3-59.7l-21.3-57l-22.3-45.7l-22.7-46L1316.9,966.5z"/>
+						<path style="fill:#7A75B5;" class="st4 anim5" d="M1304.8,989.9l3.8,6l13,25l12,24.3l10.8,22.8l10,21.3l14.5,32.8l8.5,21l14.3,37.8l13.8,40.5l9,28.8l7.5,25.8 l8.4,29.3l6.9,26.3l3.5,13.3l-22.8,35.8c0,0-17.8,26.8-30.8,43s-21.8,28-36.8,44.8s-50.3,50.5-50.3,50.5l-33.3,29.3 c0,0-21.5,17.8-35.5,27.3s-31.8,23-43.3,29.3s-28,16.5-28,16.5s-20.8-4.8-47.5-13s-60.3-19.5-77.8-25.5c-17.5-6-40.5-15.3-66.5-25.8 s-37-16.3-69.8-30.8s-70-33.5-81.3-39s-11.3-5.5-11.3-5.5s15.5-7.8,37-21.3s49.8-30,63.3-39.5s51.8-35.8,51.8-35.8l49.3-39 l44.5-37.3l35.8-34.3l34.3-36.3l37.3-42.8l29.8-37.3l29.5-40l26-36.3l24.8-36.5L1304.8,989.9z"/>
+						<path style="fill:#0098DA;" class="st5 anim6" d="M786.1,1497.7l-54,29l-71,34l-73,28.5l-74.5,24.5l-68,21.5l42,19.5c0,0,38.5,16,58,23s51,16.5,81.5,22.5 s44,10.5,78.5,13.5s77,4.5,77,4.5l64.5-1.7l50.7-5.5l45.3-7.8c0,0,34.8-9.2,53-14.2c18.2-5,49-15,50.2-15.5s26-10,26-10l32.3-13.8 l17.8-9.2l7-7.2l-85.7-25.4l-60.8-19.8c0,0-21.5-6.5-49-18.2c-27.5-11.7-58.7-24.7-74.5-32.8c-15.8-8.2-65.2-34.2-65.2-34.2 L786.1,1497.7z"/>
+						<path style="fill:#91D8F7;" class="st6 anim7" d="M269.6,989.9l-43,81.3l-21,48l-29,80l-22,74l-19,64l24,41c0,0,27,36,43,57s33,38,57,62.5s61,56.5,61,56.5l47,34 l55,32.5l157-53.5l73-30l68-35l47-26l-92-51c0,0-89-57-133-98s-129-130-129-130l-61-80l-58-89L269.6,989.9z"/>
+						<path style="fill:#FFCC29;" class="st7 anim8" d="M122,618.7l-30.4,66.5c0,0-23.4,56.6-33.9,106.1c-10.5,49.5-10.5,49.5-10.5,49.5s-6.6,46.7-7.6,66 c-1,19.3-1.7,62-1.7,62v32.3l3,34.7l5.3,41.7l6.7,37.7l7.7,37.3l14.3,44.3l21.7,60l23.3,48.5l4.3-13.5l11.3-36l11.3-34l13.3-38.7 l16.7-49.3l19.7-48l22.3-46l21.3-44l18-30.3l-25-45.7l-28.7-61.3l-20.7-48.3l-17-46l-16.7-51.3l-14.7-47.3L122,618.7z"/>
+					</svg>
+				include js/app.html
+			include pages/slider
+			section.benefits
+				.container
+					.title
+						| Преимущества
+					.benefits-wrapper
+						.benefits-items.owl-carousel
+							.benefits-item.wow.animated.fadeInDown.delay-1s
+								.benefits-icon.icon1(style="background-image: url('images/icons/icon-1.png')")
+								.benefits-txt
+									h5 7+ лет на рынке
+							.benefits-item.wow.animated.fadeInDown.delay-2s
+								.benefits-icon.icon2(style="background-image: url('images/icons/icon-2.png')")
+								.benefits-txt
+									h5 4 страны
+									span Узбекистан,Казахстан, Киргизия, Таджикистан
+							.benefits-item.wow.animated.fadeInDown.delay-3s
+								.benefits-icon.icon3(style="background-image: url('images/icons/icon-3.png')")
+								.benefits-txt
+									h5 35+ штатных специалистов
+							.benefits-item.wow.animated.fadeInDown.delay-4s
+								.benefits-icon.icon4(style="background-image: url('images/icons/icon-4.png')")
+								.benefits-txt
+									h5 200+ компаний
+							.benefits-item.wow.animated.fadeInDown.delay-5s
+								.benefits-icon.icon5(style="background-image: url('images/icons/icon-5.png')")
+								.benefits-txt
+									h5 5 000+ лизензий
+			section.products
+				.container
+					.title
+						| продукция
+					.products-wrapper
+						.products-items
+							.products-item.wow.fadeInLeft.animated
+								.products-img
+									img(src="images/content/bg1.png" alt="bg1")
+								.products-block
+									.products-title
+										h5 smartup <span class="orange">Trade</span>
+									.products-subtitle
+										p Эффективное решение для автоматизации работы компаний дистрибьюторов товаров народного потребления
+									.products-btn
+										a(href="#").btn.btn-medium
+											span Узнать подробнее
+							.products-item.wow.fadeInRight.animated
+								.products-img
+									img(src="images/content/bg2.png" alt="bg2")
+								.products-block
+									.products-title
+										h5 smartup <span class="lemon">Pharm</span>
+									.products-subtitle
+										p Программный комплекс позволяющий автоматизировать работу офисных и «полевых» сотрудников фармацевти-ческих компаний.
+									.products-btn
+										a(href="#").btn.btn-medium
+											span Узнать подробнее
+							.products-item.wow.fadeInLeft.animated
+								.products-img
+									img(src="images/content/bg3.png" alt="bg2")
+								.products-block
+									.products-title
+										h5 smartup <span class="bluesky">Medical</span>
+									.products-subtitle
+										p Легко масштабируемая система для автоматизации как сетифс медицинских учреждений,  так и в целом единой клиники, на каждом этапе.
+									.products-btn
+										a(href="#").btn.btn-medium
+											span Узнать подробнее
+							.products-item.wow.fadeInRight.animated
+								.products-img
+									img(src="images/content/bg4.png" alt="bg2")
+								.products-block
+									.products-title
+										h5 smartup <span class="pink">HR</span>
+									.products-subtitle
+										p Это инновационный продукт, позволяющий автоматизировать работу как отдела кадров так и унифицировать работу с челове-ческими ресурсами с возможностью привязки различных СКУД систем.
+									.products-btn
+										a(href="#").btn.btn-medium
+											span Узнать подробнее
+						.products-other.wow.jackInTheBox.animated
+							p Не уверены подойдет ли Вам один из наших продуктов? <br> Закажите Бесплатно “Демо версию” и пользуйтесь всеми компонентами в <br> течении месяца!
+							.products-other__btn
+								a(href="#").btn-large.btn
+									span Узнать подробнее
+			section.clients
+				.container
+					.title
+						| наши клиенты
+					.clients-wrapper
+						.clients-items.owl-carousel
+							.clients-item
+								img(src="images/content/colgate.png" alt="colgate")
+							.clients-item
+								img(src="images/content/nika.png" alt="nika")
+							.clients-item
+								img(src="images/content/pepsi.png" alt="pepsi")
+							.clients-item
+								img(src="images/content/polph.png" alt="polph")
+							.clients-item
+								img(src="images/content/colgate.png" alt="colgate")
+			section.review
+				.container
+					.title
+						| Отзывы
+					.review-items.owl-carousel
+						.review-item
+							.review-img
+								img(src="images/content/image.png" alt="image")
+							.review-block
+								h5 Иван Рамзин
+								p Программный комплекс позволяющий автоматизировать работу офисных и «полевых» сотрудников фармацевтических компаний. Это инновационный продукт, позволяющий автоматизировать работу как отдела кадров так и унифицировать
+								.review-link
+									p Директор <a href="#" target="_blank">Smart CompRate</a>
+						.review-item
+							.review-img
+								img(src="images/content/image2.jpg" alt="image")
+							.review-block
+								h5 Камад Зержанов
+								p Легко масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе. Масштабируемая система для автоматизации как сетифс медицинских учреждений, так и в целом единой клиники, на каждом этапе.
+								.review-link
+									p Старший менеджер <a href="#" target="_blank">Emoy Siamot Lou</a>
+					.review-all
+						a(href="#") Читать все отзывы
+		include pages/footer

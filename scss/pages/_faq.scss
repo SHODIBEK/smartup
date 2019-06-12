@@ -1,0 +1,107 @@
+.faq {
+    &-items {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        grid-gap: 50px;
+    }
+
+    &-select {
+        display: none;
+        select {
+            display: none;
+        }
+    }
+
+    &-link {
+        ul {
+            li {
+                padding: 10px 0;
+                border-bottom: 1px solid #dddddd;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    display: inline-block;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $text;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: $orange;
+                        transition: all 0.3s ease-in-out;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.accordions {
+    overflow: hidden;
+    border: 1px solid #dcdcdc;
+    border-radius: 11px;
+
+    & > li {
+        border-top: 1px solid #dcdcdc;
+
+        &:first-child {
+            border-top: none;
+        }
+    }
+
+    &_title {
+        display: grid;
+        grid-template-columns:1fr 80px;
+        cursor:pointer;
+        padding: 20px 30px;
+        background: #fdfdfd;
+        text-decoration: none;
+
+        h3 {
+            margin: 0;
+            font-family: $robotoC;
+            font-weight: 600;
+            font-size: 22px;
+            color: #4b4b4d;
+            transition: all 0.3s ease-in-out;
+        }
+
+        span {
+            align-self: center;
+            justify-self: end;
+            display: block;
+            width: 26px;
+            height: 17px;
+            margin: auto 0;
+            background: url(../images/icons/arrup.svg) no-repeat center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &.active {
+
+            h3 {
+                color: $orange;
+                transition: all 0.3s ease-in-out;
+            }
+
+            span {
+                transform: rotate(-180deg);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+
+    &_content {
+        display: none;
+        padding: 10px 30px;
+    }
+}
+

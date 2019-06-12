@@ -1,0 +1,16 @@
+<svg id="Группа_10" data-name="Группа 10" xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9a638;
+      }
+
+      .cls-2 {
+        fill: #fbfbfb;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Эллипс_1294" data-name="Эллипс 1294" class="cls-1" cx="37" cy="37" r="37"/>
+  <path id="Фигура_1153" data-name="Фигура 1153" class="cls-2" d="M529.073,2594.7c-2.8-1.65-5.074-.3-5.074,3.03v24.53c0,3.33,2.272,4.69,5.074,3.03l20.832-12.3c2.8-1.65,2.8-4.33,0-5.99Z" transform="translate(-497 -2572)"/>
+</svg>

@@ -1,0 +1,115 @@
+extends pug/base
+
+append vars
+    - title = 'Продукция'
+    - meta.description = 'Описание страницы'
+    - meta.viewport = 'width=device-width, initial-scale=1'
+    - link.icon = './favicon.ico'
+    - meta.formatDetection = 'telephone=no'
+    - meta.themeColor = '#77d5fa'
+    - defaultLink = 'javascript:void(0);'
+    - body.classList = ['inner-page'];
+block content
+    .content
+        include pages/header
+        .wrapper
+            .projects
+                include pages/slider
+                section.benefits
+                    .container
+                        .title
+                            | Преимущества
+                        .benefits-wrapper
+                            .benefits-items.owl-carousel
+                                .benefits-item.wow.animated.fadeInDown.delay-1s
+                                    .benefits-icon.icon1(style="background-image: url('images/icons/icon-1.png')")
+                                    .benefits-txt
+                                        h5 7+ лет на рынке
+                                .benefits-item.wow.animated.fadeInDown.delay-2s
+                                    .benefits-icon.icon2(style="background-image: url('images/icons/icon-2.png')")
+                                    .benefits-txt
+                                        h5 4 страны
+                                        span Узбекистан,Казахстан, Киргизия, Таджикистан
+                                .benefits-item.wow.animated.fadeInDown.delay-3s
+                                    .benefits-icon.icon3(style="background-image: url('images/icons/icon-3.png')")
+                                    .benefits-txt
+                                        h5 35+ штатных специалистов
+                                .benefits-item.wow.animated.fadeInDown.delay-4s
+                                    .benefits-icon.icon4(style="background-image: url('images/icons/icon-4.png')")
+                                    .benefits-txt
+                                        h5 200+ компаний
+                                .benefits-item.wow.animated.fadeInDown.delay-5s
+                                    .benefits-icon.icon5(style="background-image: url('images/icons/icon-5.png')")
+                                    .benefits-txt
+                                        h5 5 000+ лизензи
+                section.tools
+                    .container
+                        .title
+                            | Все в одном инструменте
+                        .tools-txt
+                            p Автоматизация торговли позволяет сократить значительное число затрат, вам больше не надо печатать прайс-листы и  дебиторские задолженности. Все это уже есть в актуальном состоянии  в "Smartup Trade". Экономим на оргтехнике, её обслуживании и расходных материалах. И это только прямое снижение затрат, которые Вы можете посчитать прямо сейчас.
+                            p Бизнес процессы автоматизированные со "Smartup Trade" позволяют нанимать менее квалифицированный персонал, при этом сократив временные затраты на обучение и адаптационный период нового сотрудника.
+                        .tools-video
+                            a(href="https://www.youtube.com/watch?v=Lmwh7IOwrBg" data-fancybox)
+                                img(src="images/content/Hr.jpg", alt="HR")
+                                .tools-video__desc.playIcon
+                                    | Учет и контроль филиалов в разных странах через единую систему мониторинга
+                section.functional
+                    .container
+                        .title
+                            | Функционал
+                        .functional-items
+                            .functional-item
+                                .functional-item__left
+                                    p Бизнес процессы автоматизированные со "Smartup Trade" позволяют нанимать менее квалифицированный персонал, при этом сократив временные затраты на обучение и адаптационный период нового сотрудника. 
+                                .functional-item__right
+                                    img(src="images/content/HRr.jpg", alt="HRr")
+                            .functional-item
+                                .functional-item__left
+                                    h5 Схема работы smart HR
+                                    p Бизнес процессы автоматизированные со "Smartup Trade" позволяют нанимать менее квалифицированный персонал, при этом сократив временные затраты на обучение и адаптационный период нового сотрудника. 
+                                .functional-item__right
+                                    img(src="images/content/Hr.jpg", alt="Hr")
+                        ul.functional-links
+                            .title
+                                | Возможности Smartup trade
+                            li
+                                a(href="#") Мониторинг продаж
+                            li
+                                a(href="#") Клиентская база
+                            li
+                                a(href="#") Розничный аудит
+                            li
+                                a(href="#") Информационная безопасность
+                            li
+                                a(href="#") Складские движения
+                            li
+                                a(href="#") KPI (Ключевые показатели эффективности)
+                            li
+                                a(href="#") Планирование и менеджер задач
+                            li
+                                a(href="#") Мерчендайзинг
+                            li
+                                a(href="#") Аналитика
+                            li
+                                a(href="#") Многофилиальность
+                            li
+                                a(href="#") Бухгалтерия
+                            li
+                                a(href="#") Контроль времени и персонала
+                            li
+                                a(href="#") Многовалютность
+                            li
+                                a(href="#") Временная зона
+                            li
+                                a(href="#") Широкий спектр отчетности
+                        .functional-btn
+                            a(href="#").btn
+                                span Узнать стоимость
+                section.other
+                    .container
+                        p Не уверены подойдет ли Вам один из наших продуктов?<br> Закажите Бесплатно “Демо версию” и пользуйтесь всеми<br> компонентами в течении месяца!
+                        .other-btn
+                            a(href="#").btn.btn-large
+                                span Демо версия
+        include pages/footer

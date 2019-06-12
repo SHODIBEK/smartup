@@ -1,0 +1,18 @@
+<svg id="Группа_22" data-name="Группа 22" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #e8e8e8;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Эллипс_931" data-name="Эллипс 931" class="cls-1" cx="24" cy="24" r="23"/>
+  <path id="Фигура_929" data-name="Фигура 929" class="cls-2" d="M1063.88,6985h4.77v-11.6h3.33l0.35-3.88h-3.68v-2.21c0-.92.19-1.28,1.1-1.28h2.58V6962h-3.3c-3.55,0-5.15,1.52-5.15,4.42v3.1h-2.49v3.93h2.49V6985Z" transform="translate(-1042 -6950)"/>
+</svg>

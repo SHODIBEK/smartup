@@ -1,0 +1,121 @@
+extends pug/base
+
+append vars
+    - title = 'Контакты'
+    - meta.description = 'Заголовок статьи блога'
+    - meta.viewport = 'width=device-width, initial-scale=1'
+    - link.icon = './favicon.ico'
+    - meta.formatDetection = 'telephone=no'
+    - meta.themeColor = '#77d5fa'
+    - defaultLink = 'javascript:void(0);'
+    - body.classList = ['inner-page contact-page'];
+block content
+    .content
+        include pages/header
+        .wrapper
+            .container
+                ul.crumbs
+                    li
+                        a(href="/").home
+                            | Главная
+                    li.active
+                        a(href="#") Контакты
+            .content-wrapper
+                .contact-map
+                    img(src="images/content/maps.jpg", alt="")
+                .contact
+                    .container
+                        .navigation
+                            h1
+                                | Контакты
+                    .contact-row
+                        .container
+                            .contact-col
+                                .contact-title
+                                    h3 Головной офис
+                                .contact-items
+                                    .contact-item
+                                        h5 Телефоны
+                                        ul
+                                            li +(99878) 150-44-33
+                                            li +(99871) 200-88-33
+                                    .contact-item
+                                        h5 Адрес
+                                        ul
+                                            li Узбекистан 100115, г.Ташкент, ул. Арнасай 1А
+                                    .contact-item
+                                        h5 Электронная почта
+                                        ul
+                                            li
+                                                a(href="mailto:info@greenwhite.uz" target="_blank")
+                                                    | info@greenwhite.uz
+                            .contact-col
+                                .contact-title
+                                    h3 филиалы
+                                <div class="tabs-wrapper">
+                                .tabs-inputs
+                                    ul.tabs-group.active
+                                        li(data-tab="tab-0") Казахстан
+                                    ul.tabs-group
+                                        li(data-tab="tab-1") таджикистан
+                                    ul.tabs-group
+                                        li(data-tab="tab-2") Киргизия
+                                <div class="tab-body-wrapper">
+                                <div class="tab-body active" id="tab-0">
+                                ul
+                                    li Узбекистан 100115, г.Ташкент, ул. Арнасай 1А
+                                ul
+                                    li +(99878) 150-44-33
+                                    li +(99871) 200-88-33
+                                </div>
+                                <div class="tab-body" id="tab-1">
+                                ul
+                                    li Узбекистан 100115, г.Ташкент, ул. Арнасай 2А
+                                ul
+                                    li +(99878) 150-44-33
+                                    li +(99871) 200-88-33
+                                </div>
+                                <div class="tab-body" id="tab-2">
+                                ul
+                                    li Узбекистан 100115, г.Ташкент, ул. Арнасай 3А
+                                ul
+                                    li +(99878) 150-44-33
+                                    li +(99871) 200-88-33
+                                </div>
+                                </div>
+                                </div>
+                            .contact-col
+                                .contact-title
+                                    h3 Свяжитесь с нами
+                                .contact-form
+                                    form(action="/" method="GET")
+                                        .form-groups
+                                            .form-group.error
+                                                input(type="text" name="text" class="name" id="name" autocomplete="off")
+                                                label(for="name") Представьтесь пожалуйста
+                                            .form-group.error
+                                                input(type="email" name="email" class="email" id="email" autocomplete="off")
+                                                label(for="email") Укажите Ваш адрес электронной почты
+                                            .form-group.text-group.error
+                                                textarea(name="text", id="text")
+                                                label(for="text") Введите свое сообщение
+                                        .form-bottom
+                                            .form-btn
+                                                button(type="submit" disabled).btn.submit-btn
+                                                    span Отправить
+                                            .form-block
+                                                .agreement.error
+                                                    input(type="checkbox" id="checkbox")
+                                                    label(for="checkbox") Я даю согласие на обработку персональных данных. <a href="#">Прочитать пользовательское соглашение</a>
+                                                <div class="visualCaptcha" id="simple-captcha">
+                                                <div class="visualCaptcha-possibilities">
+                                                <div class="img"><a href="javascript:void(0);"><img src="images/icons/shirt.png" alt="shirt"></a></div>
+                                                <div class="img"><a href="javascript:void(0);"><img src="images/icons/headphone.png" alt="headphone"></a></div>
+                                                <div class="img"><a href="javascript:void(0);"><img src="images/icons/auto.png" alt="auto"></a></div>
+                                                <div class="img"><a href="javascript:void(0);"><img src="images/icons/buggy.png" alt="buggy"></a></div>
+                                                <div class="img"><a href="javascript:void(0);"><img src="images/icons/coffee.png" alt="coffee"></a></div>
+                                                <div class="img"><a href="javascript:void(0);"><img src="images/icons/airplain.png" alt="airplain"></a></div>
+                                                </div>
+                                                <div class="visualCaptcha-explanation error">Выберите&nbsp;<span class="active">«автомобиль»</span>, чтобы подтвердить, что&nbsp;Вы не&nbsp;робот</div>
+                                                </div>
+        include pages/footer

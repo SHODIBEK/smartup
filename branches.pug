@@ -1,0 +1,95 @@
+extends pug/base
+
+append vars
+    - title = 'Отрасли'
+    - meta.description = 'Описание страницы'
+    - meta.viewport = 'width=device-width, initial-scale=1'
+    - link.icon = './favicon.ico'
+    - meta.formatDetection = 'telephone=no'
+    - meta.themeColor = '#77d5fa'
+    - defaultLink = 'javascript:void(0);'
+    - body.classList = ['inner-page'];
+block content
+    .content
+        include pages/header
+        .wrapper
+            include pages/slider
+            .container
+                ul.crumbs
+                    li
+                        a(href="/").home
+                            | Главная
+                    li.active
+                        a(href="#") Отрасли
+                .navigation
+                    h1
+                        | Отрасли
+                .content-wrapper
+                    .branches
+                        .branches-select
+                            select
+                                option(value="Финансовый учёт") Финансовый учёт
+                                option(value="Фармацевтика") Фармацевтика
+                                option(value="Медицинcкие учреждения") Медицинcкие учреждения
+                                option(value="Розничная и оптовая торговля") Розничная и оптовая торговля
+                                option(value="HR") HR
+                                option(value="Дистрибуция") Дистрибуция
+                                option(value="Производители FMCG") Производители FMCG
+                                option(value="Другие отрасли") Другие отрасли
+                        ul.branches-links
+                            li
+                                a(href="#") Финансовый учёт
+                            li
+                                a(href="#") Фармацевтика
+                            li
+                                a(href="#") Медицинcкие учреждения
+                            li
+                                a(href="#") Розничная и оптовая торговля
+                            li
+                                a(href="#") HR
+                            li
+                                a(href="#") Дистрибуция
+                            li
+                                a(href="#") Производители FMCG
+                            li
+                                a(href="#") Другие отрасли
+                        .branches-block
+                            p Эта страница является самой первой и главной точкой посетителя сайта, и, поэтому важно заполнить ее наиболее качественной и интересной информацией, ведь именно прочитав ее, посетитель решит – оставаться на сайте или искать необходимую информацию в другом месте. Наполняя этот блок информацией, необходимо отталкиваться от потенциальных покупателей, их желаний
+                            ul.branches-items
+                                li.branches-item
+                                    .branches-item__title
+                                        h5 smartup <span class="lemon">Pharm</span>
+                                    .branches-item__link
+                                        ul.functional-links
+                                            li
+                                                a(href="#") Мониторинг продаж обслуживаемый сетью операторов
+                                            li
+                                                a(href="#") Клиентская базабудет написана в две строки
+                                            li
+                                                a(href="#") Мониторинг продаж
+                                            li
+                                                a(href="#") Информационная безопасность
+                                            li
+                                                a(href="#") Складские движения
+                                        .branches-link
+                                            a(href="#").btn
+                                                span Подробнее
+                                li.branches-item
+                                    .branches-item__title
+                                        h5 smartup <span class="lemon">Medical</span>
+                                    .branches-item__link
+                                        ul.functional-links
+                                            li
+                                                a(href="#") Мониторинг продаж обслуживаемый сетью операторов
+                                            li
+                                                a(href="#") Клиентская базабудет написана в две строки
+                                            li
+                                                a(href="#") Мониторинг продаж
+                                            li
+                                                a(href="#") Информационная безопасность
+                                            li
+                                                a(href="#") Складские движения
+                                        .branches-link
+                                            a(href="#").btn
+                                                span Подробнее
+        include pages/footer
